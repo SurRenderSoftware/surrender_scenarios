@@ -58,7 +58,7 @@ URL_dataSPICE = 'ftp://' + source
 
 # Download SPICE data with wget. This command requires 10 minutes comment it if you have already the SPICE kernels 
 cmdToExecute = 'wget -r --no-parent --reject "index.html*" ' + URL_dataSPICE +' -P ' + spiceDir
-#os.system(cmdToExecute)
+os.system(cmdToExecute)
 
 # Download PDS data
 # We decided to plot only "v" (green) images (see Ishiguro, Masateru, et al. 
@@ -69,7 +69,7 @@ soup = BeautifulSoup(urlpath.read(), "lxml")
 filterAMICA = "_v"
 for element in soup.findAll('a'):
 	if filterAMICA in element.get('href'):
-		#urllib.request.urlretrieve(URL_images+element.get('href'), os.path.join(imagesDir,element.get('href')))
+		urllib.request.urlretrieve(URL_images+element.get('href'), os.path.join(imagesDir,element.get('href')))
 		print("Downloaded: " + element.get('href'))
 
 spiceDir = os.path.join(spiceDir, source)
