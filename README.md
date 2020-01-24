@@ -20,6 +20,7 @@ A selection of tests is provided in this project. They are coded in Python. They
 * script_07_stellar_background.py
 * script_08_itokawa_mesh.py
 * script_09_ceres_landing.py
+* script_10_itokawa_SPICE.py
 
 ## Prerequisite
 A standard Python3 installation is required, e.g. Anaconda.
