@@ -7,7 +7,7 @@
 
 # Generate conemaps and elevation maps in .big 
 # will create files FullMoon.dem, FullMoon_heightmap.big and FullMoon_conemap.big
-./bin/build_conemap  ./DATA/FullMoon.img ./DEM/FullMoon.dem
+./bin/build_conemap_spherical  ./DATA/FullMoon.img ./DEM/FullMoon.dem
 
 # Convert textures in half-precision (optional)
 ./bin/big_texture_converter_to_CF   ./DATA/FullMoon_heightmap.big ./textures/FullMoon_heightmap_cf.big
